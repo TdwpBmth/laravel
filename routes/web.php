@@ -19,7 +19,7 @@ Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
 
 Route::patch('/tasks/{task}' ,'ProjectTasksController@update');
 
-Route::resource('projects','ProjectsController')->middleware('can:update,project');//->middleware('can::update,project')
+Route::resource('projects','ProjectsController')->middleware('can:view,project');//->middleware('can::update,project')
 
 Auth::routes();
 

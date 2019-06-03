@@ -17,7 +17,7 @@ class ProjectPolicy
      * @param  \App\Project  $project
      * @return mixed
      */
-    public function update(User $user, Project $project)
+    public function view(User $user, Project $project)
     {
         return $project->owner_id == $user->id;
     }
